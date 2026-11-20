@@ -4,10 +4,12 @@
 
 ## Problema
 
-Varios objetos se comunican directamente entre sí (cada widget de un
-formulario conoce a todos los demás para validarse), formando una red de
-dependencias cruzadas difícil de seguir y de modificar sin romper algo en
-otro lado.
+Tu chat deja que varios usuarios se escriban entre sí. Si cada `User`
+guarda una referencia directa a todos los demás para poder mandarles
+mensajes, agregar un usuario nuevo significa ir y registrarlo en la
+lista de **todos** los usuarios existentes — conexiones que crecen como
+N² y que hay que mantener a mano cada vez que alguien se une o se va del
+chat.
 
 ## Solución
 

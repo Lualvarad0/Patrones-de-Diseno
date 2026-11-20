@@ -4,10 +4,12 @@
 
 ## Problema
 
-Necesitas evaluar frases de un lenguaje sencillo y bien definido (una
-expresión aritmética, una regla de negocio tipo `"edad > 18 AND pais =
-'MX'"`, una query simple) sin escribir un parser/compilador completo a
-mano con todas sus herramientas.
+Tu app de reportes deja que el usuario escriba fórmulas simples como
+`(5 + 3) - 2`. Si evaluás el árbol de la fórmula con una sola función que
+distingue el tipo de nodo a mano (`if operador == "+" ... else if
+operador == "-" ...`), cada operador nuevo (`*`, `/`, `%`) es otro `if`
+dentro de esa misma función — la única que sabe evaluar un nodo, y nada
+se puede extender sin tocarla.
 
 ## Solución
 

@@ -4,9 +4,12 @@
 
 ## Problema
 
-Tienes una colección (lista, árbol, grafo) y quieres recorrer sus
-elementos uno por uno **sin exponer su estructura interna** (si es un
-array, una lista enlazada, un árbol) al código que la recorre.
+Tu `BookCollection` guarda los títulos en una lista pública, y todo el
+código que necesita recorrerlos accede directo a esa lista con un `for`
+indexado. El código cliente queda atado a que la colección sea
+exactamente esa estructura indexable — si mañana cambiás cómo
+`BookCollection` guarda los títulos por dentro, hay que reescribir cada
+uno de esos bucles en todo el código.
 
 ## Solución
 
