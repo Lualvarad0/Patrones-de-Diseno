@@ -4,10 +4,12 @@
 
 ## Problema
 
-Necesitas crear una **cantidad enorme** de objetos similares (árboles en
-un bosque renderizado, caracteres de texto, partículas) y crear uno
-distinto por cada uno consume demasiada memoria, aunque la mayor parte de
-su estado se repite entre todos.
+Tu juego dibuja un bosque de un millón de árboles, y solo hay un puñado de
+especies distintas (pino, roble...). Si cada `Tree` guarda su propia copia
+del nombre y el sprite, un millón de árboles significa un millón de copias
+de esos datos — aunque solo haya 2 o 3 especies distintas de verdad. Si el
+sprite pesa unos cuantos KB, esa duplicación se come la memoria por nada:
+los datos son los mismos, solo cambia la posición de cada árbol.
 
 ## Solución
 

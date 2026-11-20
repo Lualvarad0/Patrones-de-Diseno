@@ -4,10 +4,12 @@
 
 ## Problema
 
-Un subsistema tiene muchas clases, con relaciones e interfaces complejas
-entre ellas, y la mayoría del código cliente solo necesita una operación
-simple de alto nivel — pero termina teniendo que conocer y coordinar todas
-esas clases internas.
+Querés agregar un botón "Ver película" en tu app de control de un home
+theater. Prender la película implica seis llamadas en el orden correcto a
+tres clases distintas (`Amplifier`, `Projector`, `DvdPlayer`), y cada
+pantalla que necesita ese botón repite el mismo bloque de seis llamadas.
+Si mañana cambia el orden correcto, o agregás una cuarta clase (luces, por
+ejemplo), hay que encontrar y corregir cada copia de esa secuencia.
 
 ## Solución
 

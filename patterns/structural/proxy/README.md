@@ -4,10 +4,12 @@
 
 ## Problema
 
-Quieres controlar el acceso a un objeto — retrasar su creación porque es
-costosa (lazy loading), validar permisos antes de dejar pasar una llamada,
-cachear resultados, o loguear cada acceso — sin que el código cliente ni
-el objeto real tengan que saber nada de eso.
+Tu galería carga cien fotos de alta resolución al abrir la pantalla, pero
+el usuario puede terminar viendo solo tres. Si crear la lista de imágenes
+ya dispara la carga de las cien (`RealImage` lee del disco en su propio
+constructor), gastás tiempo y memoria cargando fotos que nadie va a ver —
+y no hay forma de posponer esa carga sin cambiar cómo se usa `RealImage`
+en todos lados.
 
 ## Solución
 
