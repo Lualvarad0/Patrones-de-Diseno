@@ -24,6 +24,19 @@ Separas el estado de cada objeto en:
 - Cuando el número de objetos es muy grande y el costo de memoria es un
   problema real medido, no solo una sospecha.
 
+## Dónde lo vas a encontrar en la vida real
+
+- El "interning" de strings en Java, .NET y Python: dos strings literales
+  idénticos comparten el mismo objeto en memoria en vez de duplicarse.
+- Los editores de texto y procesadores de palabras: cada letra que ves en
+  pantalla reutiliza el mismo objeto "glifo" de la fuente, solo cambia su
+  posición.
+- Videojuegos con miles de árboles, balas o partículas en pantalla: todos
+  comparten el mismo modelo 3D y textura ("instancing"), solo varía su
+  posición individual.
+- Los íconos repetidos en una lista larga de una app (cientos de filas con
+  el mismo ícono de carpeta): el ícono se carga una vez y se reutiliza.
+
 ## En este repositorio
 
 Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

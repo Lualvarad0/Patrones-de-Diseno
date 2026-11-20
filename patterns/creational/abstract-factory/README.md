@@ -28,6 +28,17 @@ todo a través de ella, sin saber qué familia es.
 Una Abstract Factory suele implementarse usando varios Factory Methods, uno
 por producto.
 
+## Dónde lo vas a encontrar en la vida real
+
+- Los temas claro/oscuro de una app: una sola fábrica crea todos los
+  botones, checkboxes y campos de texto que combinan entre sí (nunca un
+  botón "claro" con un checkbox "oscuro").
+- `DbProviderFactory` en .NET: según el proveedor configurado (SQL Server,
+  PostgreSQL), crea la conexión, el comando y el adaptador correctos, todos
+  compatibles entre sí.
+- Los antiguos kits de UI multiplataforma (Swing look-and-feel, wxWidgets)
+  que arman toda una familia de widgets coherente con el sistema operativo.
+
 ## En este repositorio
 
 Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

@@ -22,6 +22,18 @@ qué hacer y a quién más avisar.
 - Coordinación de componentes que de otra forma tendrían referencias
   cruzadas entre todos ellos (complejidad O(n²) de referencias).
 
+## Dónde lo vas a encontrar en la vida real
+
+- Una sala de chat: los mensajes pasan por un servidor central (el mediador)
+  en vez de que cada usuario le hable directo a todos los demás.
+- El control de tráfico aéreo: los aviones no se coordinan entre sí, todos
+  hablan con la torre de control.
+- El "controller" de un formulario complejo, que habilita o deshabilita
+  botones según el estado combinado de varios campos, sin que los campos se
+  conozcan entre sí.
+- Un broker de mensajes como RabbitMQ o Kafka, que media entre quien produce
+  un evento y quien lo consume sin que se conozcan directamente.
+
 ## En este repositorio
 
 Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

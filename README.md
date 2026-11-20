@@ -19,6 +19,12 @@ código posible**, en lenguajes muy distintos entre sí — sin frameworks,
 sin dependencias extra y sin complicaciones que no hagan falta para
 entender la idea central.
 
+Además, el `README.md` de cada patrón incluye una sección **"Dónde lo vas a
+encontrar en la vida real"**, con ejemplos de herramientas y librerías
+conocidas que ya usan ese patrón, muchas veces sin que te des cuenta
+(el undo de tu editor de texto, el middleware de un framework web, el
+`addEventListener` del navegador, etc.).
+
 ## ¿Por dónde empiezo?
 
 Si nunca viste un patrón de diseño, estos tres son el mejor punto de
@@ -43,9 +49,11 @@ otra, fáciles de comparar:
 
 ```
 patterns/
+  README.md                <- índice de las 3 categorías
   creational/              <- patrones sobre CÓMO SE CREAN los objetos
+    README.md               <- índice de los patrones de esta categoría
     singleton/
-      README.md            <- explica el patrón en español (problema, solución, cuándo usarlo)
+      README.md            <- explica el patrón, con ejemplos de dónde se usa en la vida real
       csharp/               <- la misma idea, escrita en C#
       java/                 <- ...en Java
       javascript/           <- ...en JavaScript

@@ -27,6 +27,17 @@ método de fábrica y el tipo abstracto que devuelve.
 - Si solo tienes un tipo de producto y no prevés variantes, es
   sobre-ingeniería: un constructor normal o una función simple alcanza.
 
+## Dónde lo vas a encontrar en la vida real
+
+- `document.createElement("div")` en el navegador: el mismo método crea
+  objetos distintos según el string que le pases.
+- `Calendar.getInstance()` en Java: te devuelve una subclase de `Calendar`
+  distinta según la configuración regional, sin que vos elijas la clase.
+- Los ORM que, al conectarte, deciden internamente qué clase de "driver"
+  instanciar según la cadena de conexión (SQL Server, PostgreSQL, MySQL).
+- Frameworks de UI con un método `createButton()` en una clase base que cada
+  plataforma (Windows, Mac, Web) sobrescribe para devolver su propio botón.
+
 ## En este repositorio
 
 Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

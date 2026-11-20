@@ -22,6 +22,19 @@ no necesita saber qué hace exactamente, solo llama a `ejecutar()`.
 - Colas de tareas, operaciones programadas o diferidas.
 - Botones/menús de UI configurables donde cada acción es intercambiable.
 
+## Dónde lo vas a encontrar en la vida real
+
+- Un botón de "Cortar" en un editor: el mismo comando se puede disparar
+  desde el botón, un atajo de teclado y un ítem de menú, todos ejecutando
+  exactamente lo mismo.
+- El undo/redo (Ctrl+Z / Ctrl+Y) de cualquier editor: cada edición se guarda
+  como un comando que sabe cómo deshacerse a sí mismo.
+- Las colas de trabajos en segundo plano (Sidekiq, Laravel Queues, Celery):
+  una tarea se serializa como un "comando" y se ejecuta después, a veces en
+  otro proceso.
+- Un control remoto universal donde cada botón ejecuta un comando distinto
+  sobre el dispositivo conectado.
+
 ## En este repositorio
 
 Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

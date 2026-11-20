@@ -30,6 +30,18 @@ objeto y devuelven el builder mismo (o una copia), hasta un método final
 - Si el objeto tiene 2-3 campos simples, usa un constructor normal o
   argumentos con nombre si el lenguaje los soporta.
 
+## Dónde lo vas a encontrar en la vida real
+
+- `StringBuilder` en Java/C#: arma un string largo paso a paso en vez de
+  concatenar strings inmutables una y otra vez.
+- El "query builder" de Laravel (Eloquent), Entity Framework o Knex.js:
+  encadenás `.where().orderBy().limit()` y al final se arma la consulta SQL.
+- `AlertDialog.Builder` en Android, o `Request.Builder` de OkHttp: configurás
+  opción por opción algo que tiene demasiados parámetros opcionales para un
+  constructor normal.
+- La anotación `@Builder` de Lombok en Java, que genera automáticamente esta
+  clase por vos.
+
 ## En este repositorio
 
 Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

@@ -30,6 +30,18 @@ observador con esa información.
 - El orden de notificación no suele estar garantizado — no diseñes lógica
   que dependa de "quién se entera primero".
 
+## Dónde lo vas a encontrar en la vida real
+
+- `addEventListener` en el navegador: toda la Web está armada sobre este
+  patrón — un botón "notifica" a quien se haya suscrito a su evento `click`.
+- El `EventEmitter` de Node.js, usado por dentro de streams, servidores HTTP
+  y un montón de librerías.
+- Los sistemas reactivos como RxJS, o cómo React/Vue vuelven a renderizar un
+  componente automáticamente cuando cambia el estado del que depende.
+- Suscribirte a un canal de YouTube o a una newsletter: te avisan cada vez
+  que hay contenido nuevo, sin que vos tengas que estar preguntando todo el
+  tiempo.
+
 ## En este repositorio
 
 Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

@@ -23,6 +23,18 @@ saber cómo está hecha la colección por dentro.
   trait de Rust, etc.) — vale la pena entenderlo igual para saber qué pasa
   "por debajo" cuando iteras algo.
 
+## Dónde lo vas a encontrar en la vida real
+
+- El `for...of` de JavaScript o el `foreach` de C#/Java: funcionan porque,
+  por debajo, la colección expone un iterador — este patrón ya viene
+  integrado en el lenguaje.
+- Los generadores de Python (`yield`): producen valores de a uno, sin cargar
+  toda la secuencia en memoria.
+- Los cursores de una base de datos: recorren millones de filas de un
+  resultado sin traerlas todas a memoria al mismo tiempo.
+- `Iterator`/`Iterable` en Java, usados por dentro de cada `ArrayList`,
+  `HashSet` o `TreeMap` que recorrés con un `for`.
+
 ## En este repositorio
 
 Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

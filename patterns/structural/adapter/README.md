@@ -27,6 +27,18 @@ corriente: no cambia el enchufe original, solo lo hace compatible.
   nada, hazlo — el adapter añade una capa de indirección que no siempre
   hace falta.
 
+## Dónde lo vas a encontrar en la vida real
+
+- El ejemplo más literal: un adaptador de corriente o de USB-C a HDMI — no
+  cambia ninguno de los dos lados, solo los hace compatibles.
+- `Arrays.asList()` en Java: adapta un array nativo para que se pueda usar
+  donde se espera una `List`.
+- Integrar dos pasarelas de pago (Stripe y PayPal) detrás de una sola
+  interfaz `PaymentGateway` en tu app, aunque cada SDK cobre distinto por
+  dentro.
+- `InputStreamReader` en Java: adapta un flujo de bytes (`InputStream`) a uno
+  de caracteres (`Reader`).
+
 ## En este repositorio
 
 Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

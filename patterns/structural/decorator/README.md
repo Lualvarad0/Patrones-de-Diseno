@@ -29,6 +29,19 @@ pueden **anidar/apilar** en cualquier combinación.
   normal (o composición simple) es más clara que varias capas de
   decoradores apilados.
 
+## Dónde lo vas a encontrar en la vida real
+
+- Los streams de Java: envolver un `FileInputStream` con un
+  `BufferedInputStream` y después con un `GZIPInputStream`, cada capa
+  agregando una funcionalidad.
+- El middleware de Express.js o ASP.NET Core: cada middleware "envuelve" al
+  siguiente, agregando logging, autenticación o compresión antes de llegar
+  al handler real.
+- Los componentes "styled" de styled-components o Material UI, que envuelven
+  un componente base agregándole estilos sin tocar su código.
+- Los decoradores (`@algo`) de Python o TypeScript, que envuelven una
+  función o clase agregándole comportamiento extra.
+
 ## En este repositorio
 
 Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

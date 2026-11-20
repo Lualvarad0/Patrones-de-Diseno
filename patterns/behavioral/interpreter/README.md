@@ -23,6 +23,17 @@ recursivamente la evaluación de todo el árbol.
   cambia seguido — para algo complejo o cambiante, usa un parser generator
   en vez de este patrón a mano.
 
+## Dónde lo vas a encontrar en la vida real
+
+- Los motores de expresiones regulares: interpretan la sintaxis de un regex
+  carácter por carácter contra el texto.
+- Los motores de plantillas (Handlebars, Blade, Jinja2): interpretan
+  `{{ variable }}` reemplazándolo al evaluar una gramática simple.
+- Las fórmulas de Excel o Google Sheets (`=SUMA(A1:A5)`): se interpretan
+  como una pequeña expresión matemática cada vez que cambia una celda.
+- Los validadores de reglas de negocio ("edad > 18 AND país = 'MX'") que se
+  evalúan como un árbol de condiciones.
+
 ## En este repositorio
 
 Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

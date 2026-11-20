@@ -30,6 +30,18 @@ más pueda crear otra instancia con `new`.
   **inyección de dependencias** registrando el servicio como "singleton" en
   el contenedor, en vez de forzarlo a nivel de clase.
 
+## Dónde lo vas a encontrar en la vida real
+
+- El logger de casi cualquier framework (Log4j, Serilog, el `console` del
+  navegador): una sola instancia que todo el código usa para escribir
+  mensajes.
+- La configuración que se carga una vez al arrancar la app (`appsettings.json`,
+  variables de entorno) y se reutiliza en todos lados.
+- `Runtime.getRuntime()` en Java, o el objeto `window` del navegador:
+  siempre es el mismo objeto, sin importar desde dónde lo pidas.
+- Los servicios que registrás como `Singleton` en el contenedor de
+  inyección de dependencias de ASP.NET Core, Spring o NestJS.
+
 ## En este repositorio
 
 Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

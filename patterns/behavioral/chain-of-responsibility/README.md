@@ -22,6 +22,17 @@ conoce el primer eslabón.
   escalamiento (nivel 1 → nivel 2 → nivel 3), manejo de eventos de UI que
   "burbujean".
 
+## Dónde lo vas a encontrar en la vida real
+
+- Cada middleware de Express.js o del pipeline de ASP.NET Core: decide si
+  maneja la petición o la pasa al siguiente con `next()`.
+- Un clic en una página web "burbujea" de elemento en elemento hasta el
+  `document`, a menos que algo llame a `stopPropagation()`.
+- Un sistema de soporte técnico con niveles de escalamiento: nivel 1 intenta
+  resolver, si no puede lo pasa a nivel 2, y así.
+- Los "appenders" encadenados de Log4j o los filtros de un `HttpHandler`,
+  donde cada uno decide si procesa el log/petición o lo deja pasar.
+
 ## En este repositorio
 
 Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

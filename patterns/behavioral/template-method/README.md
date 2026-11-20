@@ -29,6 +29,20 @@ algoritmo); Strategy usa composición (inyectas un objeto que *es* el
 algoritmo completo). Template Method es más rígido pero requiere menos
 código para variantes pequeñas.
 
+## Dónde lo vas a encontrar en la vida real
+
+- Los frameworks de testing (JUnit, xUnit, Jest): siempre ejecutan
+  `setUp() → test() → tearDown()` en ese orden fijo; vos solo escribís el
+  `test()`.
+- Los Servlets de Java: el framework llama siempre a `service()`, que a su
+  vez llama a tu `doGet()` o `doPost()` — el orden general nunca lo escribís
+  vos.
+- `Arrays.sort()`: el algoritmo de ordenamiento está fijo, pero llama a tu
+  `compareTo()` para decidir el único paso que cambia.
+- Los pipelines de integración continua (CI): casi todos siguen el mismo
+  esqueleto (checkout → instalar → build → test → deploy) y cada proyecto
+  solo cambia los comandos de cada paso.
+
 ## En este repositorio
 
 Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

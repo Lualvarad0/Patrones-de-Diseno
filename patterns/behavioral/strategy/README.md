@@ -27,6 +27,18 @@ invoca sin saber cuál es exactamente — simplemente confía en la interfaz.
 - Si solo tienes una o dos variantes que nunca cambian, una función normal
   o un simple `if` es más directo que crear una jerarquía de clases.
 
+## Dónde lo vas a encontrar en la vida real
+
+- `Array.prototype.sort(compareFn)` en JavaScript o
+  `Collections.sort(lista, comparador)` en Java: le pasás el algoritmo de
+  comparación como una pieza intercambiable.
+- Google Maps dejándote elegir entre ruta "más rápida", "más corta" o
+  "evitar peajes" para el mismo origen y destino.
+- Un checkout que acepta tarjeta, PayPal o criptomonedas: cada forma de pago
+  es una estrategia intercambiable detrás de un mismo "procesar pago".
+- Los formatos de compresión dentro de un archivo ZIP: cada archivo interno
+  puede comprimirse con una estrategia distinta.
+
 ## En este repositorio
 
 Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

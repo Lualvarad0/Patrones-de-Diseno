@@ -28,6 +28,20 @@ directamente por quien lo necesite.
   igual, no está simplificando nada — revisa si de verdad reduce la
   complejidad percibida por el cliente.
 
+## Dónde lo vas a encontrar en la vida real
+
+- jQuery en su momento: una interfaz simple (`$("#id").hide()`) escondiendo
+  toda la complicación de manipular el DOM a mano entre navegadores
+  distintos.
+- Un servicio `PaymentService.cobrar()` en tu app que por dentro valida
+  fraude, llama a la pasarela de pago y manda el email de recibo — el resto
+  del código solo llama a ese método.
+- `Mail::send()` en Laravel y métodos similares en otros frameworks:
+  esconden colas, proveedores SMTP y plantillas detrás de una sola llamada.
+- El botón de "Imprimir" de cualquier programa: por dentro coordina el
+  spooler, el driver de la impresora y el diálogo de configuración, pero vos
+  solo apretás un botón.
+
 ## En este repositorio
 
 Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.
