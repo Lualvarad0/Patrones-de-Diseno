@@ -4,10 +4,12 @@
 
 ## Problema
 
-Tienes una jerarquía de clases estable (formas: `Círculo`, `Cuadrado`,
-`Triángulo`) y necesitas agregar **nuevas operaciones** sobre ellas con
-frecuencia (calcular área, exportar a SVG, exportar a JSON...) sin tener
-que añadir un método nuevo a cada clase de la jerarquía cada vez.
+Tu app de dibujo tiene `Circle` y `Square`, y necesitás calcular áreas y
+también exportarlas a SVG. Si cada operación nueva se agrega como método
+en cada clase de figura (`GetArea()`, `ToSvg()`...), `Circle` y `Square`
+terminan conociendo lógica que no tiene nada que ver con "ser una
+figura" — y agregar una operación más (exportar a JSON, por ejemplo)
+significa editar todas las clases de figura existentes otra vez.
 
 ## Solución
 
