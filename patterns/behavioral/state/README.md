@@ -4,10 +4,12 @@
 
 ## Problema
 
-Un objeto cambia su comportamiento según su "estado" interno (un pedido
-que puede estar `Pendiente`, `Pagado`, `Enviado`, `Cancelado`, y cada
-método se comporta distinto según cuál sea), y el código termina lleno de
-`if estado == X` / `switch(estado)` repetidos en cada método.
+Un semáforo cambia de color y se comporta distinto según en cuál está.
+Si `TrafficLight` guarda el color como un string/enum y cada método lo
+mira con un `switch` (`case "Red": color = "Green"; ...`), cada
+comportamiento que depende del color termina con su propio `switch`
+calcado, y agregar un estado nuevo (una luz intermitente, por ejemplo)
+significa tocar todos esos `switch` a la vez.
 
 ## Solución
 

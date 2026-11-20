@@ -4,10 +4,12 @@
 
 ## Problema
 
-Varias clases comparten el **mismo esqueleto de algoritmo** (preparar →
-procesar → finalizar), pero uno o más de esos pasos varía según la
-subclase, y terminas duplicando el esqueleto completo en cada una solo
-para cambiar un paso.
+Tenés que procesar archivos CSV y JSON: leer, parsear y guardar. Si cada
+formato termina con su propia clase que copia los mismos pasos de leer
+y guardar, y solo cambia el paso de parseo, los pasos duplicados quedan
+repetidos en cada clase — si algún día cambian, hay que recordar
+actualizar cada copia por separado, y es fácil que alguna quede
+desincronizada.
 
 ## Solución
 
