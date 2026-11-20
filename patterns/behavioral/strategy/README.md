@@ -4,10 +4,15 @@
 
 ## Problema
 
-Tienes varias formas de hacer lo mismo (distintos algoritmos de
-ordenamiento, distintas formas de calcular un descuento, distintas rutas
-de navegación) y tu código termina lleno de `if/else` o `switch` gigantes
-para elegir cuál usar, repetidos en varios lugares.
+Estás armando el checkout de un e-commerce. Al principio solo aceptabas
+tarjeta de crédito, así que la lógica de cobro vivía directamente adentro de
+`Checkout()`. El negocio pidió sumar PayPal, y agregaste un
+`if (metodo == "paypal")`. Ahora piden sumar criptomonedas y transferencia
+bancaria. `Checkout()` ya es un bloque de 80 líneas con un `if/else` (o
+`switch`) por cada método de pago, cualquier cambio en la lógica de uno
+arriesga romper los demás porque comparten el mismo bloque de código, y
+probar un solo método de pago aislado requiere ejecutar igual toda la
+función con todas sus ramas.
 
 ## Solución
 

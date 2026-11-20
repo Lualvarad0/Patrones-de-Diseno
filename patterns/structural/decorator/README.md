@@ -4,10 +4,15 @@
 
 ## Problema
 
-Quieres añadir comportamiento extra a un objeto (por ejemplo, "este café
-también lleva leche y también lleva caramelo") sin modificar su clase y
-sin generar una explosión combinatoria de subclases
-(`CafeConLecheYCaramelo`, `CafeConLeche`, `CafeConCaramelo`...).
+Estás armando el sistema de pedidos de una cafetería (tipo app de
+Starbucks). Un café puede llevar leche, o no; azúcar, o no — y cada
+combinación cambia el precio y la descripción final. Si modelás cada
+combinación como una subclase (`CafeConLeche`, `CafeConLecheYAzucar`,
+`CafeConAzucar`...), con solo 2 extras ya tenés 4 clases, y cuando el
+negocio pide sumar un tercer y cuarto extra (crema, shot extra) la cantidad
+de clases se duplica en cada paso — 16 combinaciones posibles con 4 extras,
+aunque la única diferencia real entre ellas sea sumar un precio y concatenar
+un texto a la descripción.
 
 ## Solución
 
