@@ -4,10 +4,12 @@
 
 ## Problema
 
-Un objeto (el "sujeto") cambia de estado y **varios otros objetos**
-necesitan enterarse y reaccionar (actualizar una UI, loguear, enviar una
-notificación), pero no quieres que el sujeto conozca las clases concretas
-de todos sus interesados ni los llame uno por uno a mano cada vez.
+Tu estación meteorológica actualiza un display de celular y uno de TV
+cada vez que cambia la temperatura. Si `WeatherStation` conoce a cada
+display por su tipo concreto y los llama a mano
+(`phone.Update(temperatura); tv.Update(temperatura);`), queda acoplada a
+cada tipo de display que exista — agregar o quitar uno implica editar
+ese método cada vez.
 
 ## Solución
 

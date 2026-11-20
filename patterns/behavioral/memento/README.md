@@ -4,10 +4,13 @@
 
 ## Problema
 
-Quieres poder guardar y restaurar el estado anterior de un objeto (un
-"undo" de un editor de texto, un checkpoint de juego) sin romper su
-encapsulación — es decir, sin exponer todos sus campos internos al
-código externo que gestiona el historial.
+Tu editor de texto necesita un "deshacer". Si la forma obvia de guardar
+un checkpoint es que el historial lea el contenido directamente
+(`history.push(editor.content)`) y lo reescriba igual de directo al
+deshacer, el historial necesita acceso de lectura y escritura al estado
+interno del editor — y cualquier campo nuevo que el editor agregue
+(cursor, selección, formato) tiene que replicarse también en el
+historial.
 
 ## Solución
 
