@@ -4,9 +4,13 @@
 
 ## Problema
 
-Tienes código que crea objetos con `new ConcretaX()`, pero no quieres que
-ese código dependa de la clase concreta exacta — quieres poder cambiarla o
-añadir nuevas variantes sin tocar la lógica que las usa.
+Tu app genera reportes y, al principio, solo exportaba a PDF. El controlador
+web, el job nocturno y el botón de "Exportar" terminaron cada uno con su
+propio `new PdfDocument()` repetido. Ahora el negocio pide poder exportar a
+Word también, y tenés que ir a buscar **cada uno** de esos lugares y
+convertirlo en un `if (tipo == "pdf") ... else ...`. Si te olvidás de
+actualizar uno, ese lugar se queda exportando siempre PDF aunque el usuario
+haya pedido Word, y nadie se entera hasta que alguien se queja.
 
 ## Solución
 

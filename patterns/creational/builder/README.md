@@ -4,11 +4,14 @@
 
 ## Problema
 
-Un objeto tiene muchos parámetros opcionales de construcción (piensa en un
-`HttpRequest`, una `Pizza` con 10 ingredientes opcionales, un `Document`).
-Un constructor con 10 parámetros, varios booleanos sueltos, o decenas de
-constructores sobrecargados (`telescoping constructor`) es horrible de
-leer y usar.
+Tu app de delivery de pizzas modela cada pizza con un constructor que
+recibe todos los ingredientes como parámetros booleanos:
+`new Pizza("large", true, false, true, false, true, false)`. Nadie puede
+leer qué lleva esa pizza sin ir a contar posiciones en la firma del
+constructor, y si el negocio agrega un ingrediente nuevo en el medio de la
+lista, todos los lugares del código que crean una pizza quedan con sus
+argumentos corridos de lugar — sin que el compilador avise, porque
+`true`/`false` encaja en cualquier posición booleana.
 
 ## Solución
 

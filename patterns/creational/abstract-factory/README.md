@@ -4,9 +4,15 @@
 
 ## Problema
 
-Necesitas crear **familias de objetos relacionados** (por ejemplo, botones
-y checkboxes de un tema "claro" o de un tema "oscuro") y asegurarte de que
-nunca se mezclen objetos de familias distintas en el mismo contexto.
+Tu app tiene un tema claro y uno oscuro. El primer intento es que cada
+widget decida su propia clase por separado, con un `if (tema == "oscuro")`
+repetido antes de crear el botón y otro antes de crear el checkbox. Como
+son dos decisiones independientes, un copy-paste apurado (o simplemente
+olvidarse de uno de los `if`) puede dejar un botón oscuro al lado de un
+checkbox claro en la misma pantalla — un bug visual que nadie detecta hasta
+que alguien manda una captura rara. Necesitás **crear familias completas de
+objetos relacionados** y garantizar que nunca se mezclen objetos de
+familias distintas en el mismo contexto.
 
 ## Solución
 

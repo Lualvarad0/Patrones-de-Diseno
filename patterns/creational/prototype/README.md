@@ -4,10 +4,15 @@
 
 ## Problema
 
-Crear un objeto nuevo desde cero es caro (consulta a base de datos, cálculo
-pesado) o simplemente quieres un objeto "casi igual" a otro que ya existe,
-con un par de campos distintos, sin acoplarte a su clase concreta para
-poder copiarlo.
+Necesitás una copia independiente de un objeto (`Sheep`, en los ejemplos de
+este repo) en varios lugares del código: un botón de "Duplicar", un
+endpoint, un test. Sin Prototype, cada uno de esos lugares arma la copia a
+mano, campo por campo (`new Sheep(original.Name, original.Color)`). Eso
+funciona hasta que la clase crece y le agregás un campo nuevo — todos esos
+lugares que copiaban "a mano" siguen copiando solo los campos viejos, y
+nadie se entera hasta que alguien nota datos raros en producción. Crear un
+objeto nuevo desde cero también puede ser caro (consulta a base de datos,
+cálculo pesado) cuando ya tenés uno "casi igual" a mano.
 
 ## Solución
 
