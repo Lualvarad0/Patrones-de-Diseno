@@ -31,5 +31,4 @@ esto permite que el visitante sepa exactamente qué tipo concreto recibió
 
 ## En este repositorio
 
-⬜ Pendiente de implementación — ¡contribuciones bienvenidas! Ver
-[CONTRIBUTING.md](../../../CONTRIBUTING.md).
+Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

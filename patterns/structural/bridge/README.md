@@ -26,5 +26,4 @@ de ella. Así cada dimensión crece por su lado.
 
 ## En este repositorio
 
-⬜ Pendiente de implementación — ¡contribuciones bienvenidas! Ver
-[CONTRIBUTING.md](../../../CONTRIBUTING.md).
+Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

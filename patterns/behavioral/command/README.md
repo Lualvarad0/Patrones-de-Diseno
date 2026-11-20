@@ -24,5 +24,4 @@ no necesita saber qué hace exactamente, solo llama a `ejecutar()`.
 
 ## En este repositorio
 
-⬜ Pendiente de implementación — ¡contribuciones bienvenidas! Ver
-[CONTRIBUTING.md](../../../CONTRIBUTING.md).
+Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

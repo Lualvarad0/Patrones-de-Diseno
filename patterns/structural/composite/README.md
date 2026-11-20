@@ -25,5 +25,4 @@ método en la raíz y la recursión ocurre sola.
 
 ## En este repositorio
 
-⬜ Pendiente de implementación — ¡contribuciones bienvenidas! Ver
-[CONTRIBUTING.md](../../../CONTRIBUTING.md).
+Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.

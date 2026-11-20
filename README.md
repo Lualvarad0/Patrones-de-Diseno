@@ -54,37 +54,35 @@ y comentarios sobre las particularidades de implementarlo ahí.
 
 ## Estado actual
 
-El objetivo final es tener los 23 patrones implementados en los 7 lenguajes.
-Esto se construye de forma incremental — cada patrón tiene su README aunque
-el código todavía no esté en todos los lenguajes.
+Los 23 patrones de GoF están implementados en los 7 lenguajes.
 
 | Categoría   | Patrón                  | C# | Java | JS | Rust | C++ | PHP | COBOL |
 |-------------|--------------------------|----|------|----|------|-----|-----|-------|
 | Creacional  | Singleton                | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
 | Creacional  | Factory Method           | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
-| Creacional  | Abstract Factory         | ⬜ | ⬜   | ⬜ | ⬜   | ⬜  | ⬜  | ⬜    |
-| Creacional  | Builder                  | ⬜ | ⬜   | ⬜ | ⬜   | ⬜  | ⬜  | ⬜    |
-| Creacional  | Prototype                | ⬜ | ⬜   | ⬜ | ⬜   | ⬜  | ⬜  | ⬜    |
+| Creacional  | Abstract Factory         | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
+| Creacional  | Builder                  | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
+| Creacional  | Prototype                | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
 | Estructural | Adapter                  | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
 | Estructural | Decorator                | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
-| Estructural | Bridge                   | ⬜ | ⬜   | ⬜ | ⬜   | ⬜  | ⬜  | ⬜    |
-| Estructural | Composite                | ⬜ | ⬜   | ⬜ | ⬜   | ⬜  | ⬜  | ⬜    |
-| Estructural | Facade                   | ⬜ | ⬜   | ⬜ | ⬜   | ⬜  | ⬜  | ⬜    |
-| Estructural | Flyweight                | ⬜ | ⬜   | ⬜ | ⬜   | ⬜  | ⬜  | ⬜    |
-| Estructural | Proxy                    | ⬜ | ⬜   | ⬜ | ⬜   | ⬜  | ⬜  | ⬜    |
+| Estructural | Bridge                   | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
+| Estructural | Composite                | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
+| Estructural | Facade                   | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
+| Estructural | Flyweight                | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
+| Estructural | Proxy                    | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
 | Comportam.  | Strategy                 | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
 | Comportam.  | Observer                 | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
-| Comportam.  | Chain of Responsibility  | ⬜ | ⬜   | ⬜ | ⬜   | ⬜  | ⬜  | ⬜    |
-| Comportam.  | Command                  | ⬜ | ⬜   | ⬜ | ⬜   | ⬜  | ⬜  | ⬜    |
-| Comportam.  | Interpreter              | ⬜ | ⬜   | ⬜ | ⬜   | ⬜  | ⬜  | ⬜    |
-| Comportam.  | Iterator                 | ⬜ | ⬜   | ⬜ | ⬜   | ⬜  | ⬜  | ⬜    |
-| Comportam.  | Mediator                 | ⬜ | ⬜   | ⬜ | ⬜   | ⬜  | ⬜  | ⬜    |
-| Comportam.  | Memento                  | ⬜ | ⬜   | ⬜ | ⬜   | ⬜  | ⬜  | ⬜    |
-| Comportam.  | State                    | ⬜ | ⬜   | ⬜ | ⬜   | ⬜  | ⬜  | ⬜    |
-| Comportam.  | Template Method          | ⬜ | ⬜   | ⬜ | ⬜   | ⬜  | ⬜  | ⬜    |
-| Comportam.  | Visitor                  | ⬜ | ⬜   | ⬜ | ⬜   | ⬜  | ⬜  | ⬜    |
+| Comportam.  | Chain of Responsibility  | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
+| Comportam.  | Command                  | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
+| Comportam.  | Interpreter              | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
+| Comportam.  | Iterator                 | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
+| Comportam.  | Mediator                 | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
+| Comportam.  | Memento                  | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
+| Comportam.  | State                    | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
+| Comportam.  | Template Method          | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
+| Comportam.  | Visitor                  | ✅ | ✅   | ✅ | ✅   | ✅  | ✅  | ✅    |
 
-✅ implementado · ⬜ pendiente (el README del patrón ya existe, falta el código)
+✅ implementado
 
 ## Frameworks
 

@@ -25,5 +25,4 @@ saber cómo está hecha la colección por dentro.
 
 ## En este repositorio
 
-⬜ Pendiente de implementación — ¡contribuciones bienvenidas! Ver
-[CONTRIBUTING.md](../../../CONTRIBUTING.md).
+Implementado en: C#, Java, JavaScript, Rust, C++, PHP, COBOL.
