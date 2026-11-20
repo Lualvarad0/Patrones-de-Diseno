@@ -4,10 +4,12 @@
 
 ## Problema
 
-Quieres tratar una **acción** (encender la luz, guardar un documento,
-mover una pieza) como un objeto en sí mismo: poder guardarla en una cola,
-loguearla, deshacerla (`undo`), o pasarla como parámetro — en vez de solo
-poder ejecutarla inmediatamente llamando a un método.
+Tu control remoto necesita un botón "deshacer". Si el control llama
+directo a los métodos del dispositivo (`light.TurnOn()`,
+`light.TurnOff()`), nunca queda un registro de qué se ejecutó — el
+control olvida la acción apenas termina de ejecutarla, así que no hay
+forma de deshacer la última sin que el control empiece a conocer los
+detalles de cada dispositivo y de cada acción posible.
 
 ## Solución
 

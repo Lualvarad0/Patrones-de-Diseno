@@ -4,10 +4,12 @@
 
 ## Problema
 
-Una petición puede necesitar ser manejada por **uno de varios manejadores
-posibles**, pero no sabes de antemano cuál exactamente, y no quieres que
-quien envía la petición conozca toda la lista de manejadores ni el orden
-en que deben intentarlo.
+Un ticket de soporte tiene que resolverse en el nivel que corresponda
+según su severidad. Si una sola función concentra todas las reglas de
+escalamiento (`if severity <= 1 ... else if severity <= 2 ...`), esa
+función tiene que conocer los umbrales de todos los niveles a la vez, y
+agregar un nivel nuevo significa editarla junto con cualquier otro lugar
+del código que repita la misma lógica.
 
 ## Solución
 
