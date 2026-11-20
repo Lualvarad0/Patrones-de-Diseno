@@ -4,9 +4,14 @@
 
 ## Problema
 
-Tienes una clase existente (propia o de una librería externa) cuya
-interfaz **no es compatible** con la que tu código espera, y no puedes (o
-no quieres) modificarla directamente.
+Tu app dibuja una lista de figuras llamando a `.Draw()` en cada una. Ahora
+necesitás integrar `LegacyRectangle`, una clase de una librería de terceros
+con una firma completamente distinta (`OldDraw(x1, y1, x2, y2)`, sin el
+método `Draw()` que tu código espera, y no podés modificarla porque viene
+de afuera). La solución rápida es meter un `if`/`instanceof` especial en el
+bucle de dibujo cada vez que aparece un tipo incompatible — y volver a
+tocar ese mismo bucle cada vez que sumás una librería más con otra figura
+rara.
 
 ## Solución
 
