@@ -4,11 +4,13 @@
 
 ## Problema
 
-Tienes una estructura de **árbol** (carpetas con archivos y subcarpetas,
-un menú con submenús, elementos UI que contienen otros elementos) y
-quieres tratar objetos individuales (hojas) y grupos de objetos
-(contenedores) **de la misma forma**, sin que el código cliente tenga que
-preguntar constantemente "¿esto es una hoja o un grupo?".
+Necesitás calcular el tamaño total de una carpeta de proyecto que contiene
+archivos sueltos y subcarpetas con más archivos adentro. Sin un diseño que
+unifique ambos casos, cada función que recorre el árbol (calcular tamaño,
+imprimir, buscar un archivo) tiene que preguntar todo el tiempo "¿esto es
+un archivo o una carpeta?" antes de decidir cómo tratarlo — y agregar un
+tercer tipo de nodo (un symlink, por ejemplo) obliga a tocar todas esas
+funciones.
 
 ## Solución
 

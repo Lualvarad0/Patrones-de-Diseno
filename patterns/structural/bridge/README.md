@@ -4,10 +4,14 @@
 
 ## Problema
 
-Tienes una jerarquía de clases que crece en dos dimensiones distintas a la
-vez (por ejemplo, `Forma` × `MotorDeRenderizado`, o `ControlRemoto` ×
-`TipoDeDispositivo`) y usar solo herencia te obliga a crear una subclase
-por cada combinación posible.
+Tenés un `RemoteControl` básico y un `AdvancedRemoteControl` (que agrega
+mute), y necesitás que ambos funcionen con un `Tv` y con una `Radio`. Si
+cada control hereda directo del dispositivo que maneja en vez de delegar en
+una interfaz, te quedan dos dimensiones — tipo de control × tipo de
+dispositivo — que se multiplican: `TvRemoteControl`, `RadioRemoteControl`,
+`AdvancedTvRemoteControl`, `AdvancedRadioRemoteControl`... y cada
+dispositivo nuevo que agregás duplica otra vez toda la jerarquía de
+controles.
 
 ## Solución
 
