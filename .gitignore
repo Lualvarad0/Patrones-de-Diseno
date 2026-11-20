@@ -1,0 +1,44 @@
+# C#/.NET
+bin/
+obj/
+*.user
+
+# Java
+*.class
+target/
+.gradle/
+
+# JavaScript/Node
+node_modules/
+npm-debug.log*
+dist/
+
+# Rust
+**/target/
+Cargo.lock
+
+# C++
+*.o
+*.obj
+*.exe
+*.out
+*.exe~
+build/
+cmake-build-*/
+
+# PHP
+vendor/
+composer.lock
+
+# COBOL
+*.exe
+*.int
+*.gnt
+*.so
+
+# OS / Editors
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
